@@ -13,19 +13,24 @@ h2 {
 .header {
   width: 100%;
   position: fixed;
-  box-shadow: #c0c0c0;
   top: 0;
   right: 0;
   left: 0;
+  background-color: white;
 
   nav {
     height: 70px;
+    border: 0;
     .container-fluid {
       position: fixed;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
+  }
+
+  @media (max-width: 990px) {
+    background-color: gainsboro;
   }
 }
 
