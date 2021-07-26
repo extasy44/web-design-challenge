@@ -1,5 +1,8 @@
 const fetchData = async () => {
-  const response = await fetch('Resources/cities.json');
+  const url =
+    'https://extasy44.github.io/web-design-challenge/Resources/cities.json' ||
+    'Resources/cities.json';
+  const response = await fetch(url);
   return response.json();
 };
 
