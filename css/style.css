@@ -86,13 +86,15 @@ h2 {
         .main .visualizations .section-container .viz-section img {
           width: 100%;
           margin-bottom: 1rem; }
-  .main #data table {
-    border-collapse: collapse;
-    width: 100%; }
-  .main #data th,
-  .main #data td {
-    padding: 0.25rem;
-    text-align: left;
-    border: 1px solid #ccc; }
-  .main #data tbody tr:nth-child(odd) {
-    background: #eee; }
+  .main #data {
+    overflow: scroll; }
+    .main #data table {
+      border-collapse: collapse;
+      width: 100%; }
+    .main #data th,
+    .main #data td {
+      padding: 0.25rem;
+      text-align: left;
+      border: 1px solid #ccc; }
+    .main #data tbody tr:nth-child(odd) {
+      background: #eee; }
