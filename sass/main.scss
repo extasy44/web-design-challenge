@@ -3,9 +3,30 @@ img {
 }
 
 h2 {
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid white;
-  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  box-shadow: #c0c0c0;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  nav {
+    height: 70px;
+    .container-fluid {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
 
 .main {
@@ -13,7 +34,11 @@ h2 {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  background-color: #c0c0c0;
+  background-color: #e9e9e9;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 
   .summary {
     display: flex;
@@ -22,6 +47,7 @@ h2 {
     flex-grow: 1;
     flex-wrap: wrap;
     max-width: 100%;
+    margin-top: 70px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -35,6 +61,7 @@ h2 {
         width: 40%;
       }
       p {
+        font-size: 1.4rem;
         margin: 1rem;
       }
 
@@ -54,11 +81,10 @@ h2 {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      img {
-        width: 50%;
-
-        @media (max-width: 768px) {
-          width: 25%;
+      a {
+        width: 25%;
+        &:hover {
+          border: 1px solid black;
         }
       }
     }
@@ -75,6 +101,39 @@ h2 {
           width: 100%;
         }
       }
+    }
+
+    .section-container {
+      margin: 1rem 0;
+
+      .viz-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        img {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  #data {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th,
+    td {
+      padding: 0.25rem;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+    tbody tr:nth-child(odd) {
+      background: #eee;
     }
   }
 }

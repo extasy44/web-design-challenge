@@ -37,25 +37,28 @@
                 <a
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
-                  href="#"
+                  href="#visualizations"
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
                   >Plots</a
                 >
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Max Temperature</a>
-                  <a class="dropdown-item" href="#">Humidity</a>
-                  <a class="dropdown-item" href="#">Cloudiness</a>
-                  <a class="dropdown-item" href="#">Wind Speed</a>
+                  <a class="dropdown-item" href="#temperature"
+                    >Max Temperature</a
+                  >
+                  <a class="dropdown-item" href="#humidity">Humidity</a>
+                  <a class="dropdown-item" href="#cloudness">Cloudiness</a>
+                  <a class="dropdown-item" href="#windspeed">Wind Speed</a>
                 </div>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Comparison</a>
+                <a class="nav-link" href="#comparison">Comparison</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="#">Data</a>
+                <a class="nav-link" href="#data">Data</a>
               </li>
             </ul>
           </div>
@@ -76,16 +79,62 @@
           </p>
         </div>
       </div>
-      <div class="visualizations">
+      <div id="visualizations" class="visualizations">
         <h2>Visualizations</h2>
         <div class="img-container">
-          <img src="assets/images/Fig1.png" />
-          <img src="assets/images/Fig2.png" />
-          <img src="assets/images/Fig3.png" />
-          <img src="assets/images/Fig4.png" />
+          <a href="#temperature"><img src="assets/images/Fig1.png" /></a>
+          <a href="#humidity"><img src="assets/images/Fig2.png" /></a>
+          <a href="#cloudness"><img src="assets/images/Fig3.png" /></a>
+          <a href="#windspeed"><img src="assets/images/Fig4.png" /></a>
+        </div>
+
+        <div class="section-container">
+          <div id="temperature" class="viz-section">
+            <h2>Max Temperature(F) vs. Latitude</h2>
+            <img src="assets/images/Fig1.png" />
+            <p>
+              As expected, the weather becomes significantly warmer as one
+              approaches the equator (0 Deg. Latitude). More interestingly,
+              however, is the fact that the southern hemisphere tends to be
+              warmer this time of the year than the northern hemisphere. This
+              may be due to the tilt of the earth at the time of the year this
+              data was gathered.
+            </p>
+          </div>
+          <div id="humidity" class="viz-section">
+            <h2>Humidity (%) vs. Latitude</h2>
+            <img src="assets/images/Fig2.png" />
+            <p>
+              Humidity does not show a strong correlation to latitude. The
+              visualization shows a great variety of humidity percentages at
+              different latitudes. Therefore, we cannot conclude that there is a
+              conclusive pattern between humidity and latitude.
+            </p>
+          </div>
+          <div id="cloudness" class="viz-section">
+            <h2>Cloudiness (%) vs. Latitude</h2>
+            <img src="assets/images/Fig3.png" />
+            <p>
+              Cloudiness does not show a strong correlation to latitude. The
+              visualization shows a great variety of cloudiness percentages at
+              different latitudes. Therefore, we cannot conclude that there is a
+              conclusive pattern between cloudiness and latitude.
+            </p>
+          </div>
+          <div id="windspeed" class="viz-section">
+            <h2>Wind Speed (mph) vs. Latitude</h2>
+            <img src="assets/images/Fig4.png" />
+            <p>
+              Wind speed appears to slightly increase as we move away from the
+              equator. However, to conclusively describe a pattern, we would
+              need to go beyond the range in data to reach cities at closer to
+              the poles. Only then can we have a sample large to confirm the
+              pattern.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="visualizations">
+      <div id="comparison" class="visualizations">
         <h2>Comparison: Latitude vs X</h2>
         <span>Click any plot to get an in-depth analysis</span>
         <div class="comparison-img-container">
@@ -95,6 +144,17 @@
           <img src="assets/images/Fig4.png" />
         </div>
       </div>
+
+      <div id="data">
+        <h2>Data Set</h2>
+        <p>
+          The following table includes all of the data used for plotting during
+          this project.
+        </p>
+      </div>
     </div>
+
+    <script src="./Resources/custom.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>

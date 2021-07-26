@@ -2,23 +2,44 @@ img {
   max-width: 100%; }
 
 h2 {
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid white;
-  margin-bottom: 0.5rem; }
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center; }
+
+.header {
+  width: 100%;
+  position: fixed;
+  box-shadow: #c0c0c0;
+  top: 0;
+  right: 0;
+  left: 0; }
+  .header nav {
+    height: 70px; }
+    .header nav .container-fluid {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  background-color: #c0c0c0; }
+  background-color: #e9e9e9; }
+  @media (max-width: 768px) {
+    .main {
+      padding: 0.5rem; } }
   .main .summary {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     flex-grow: 1;
     flex-wrap: wrap;
-    max-width: 100%; }
+    max-width: 100%;
+    margin-top: 70px; }
     @media (max-width: 768px) {
       .main .summary {
         flex-direction: column; } }
@@ -28,6 +49,7 @@ h2 {
       .main .summary-content img {
         width: 40%; }
       .main .summary-content p {
+        font-size: 1.4rem;
         margin: 1rem; }
       @media (max-width: 768px) {
         .main .summary-content {
@@ -40,11 +62,10 @@ h2 {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap; }
-      .main .visualizations .img-container img {
-        width: 50%; }
-        @media (max-width: 768px) {
-          .main .visualizations .img-container img {
-            width: 25%; } }
+      .main .visualizations .img-container a {
+        width: 25%; }
+        .main .visualizations .img-container a:hover {
+          border: 1px solid black; }
     .main .visualizations .comparison-img-container {
       display: flex;
       flex-direction: row;
@@ -54,3 +75,24 @@ h2 {
         @media (max-width: 768px) {
           .main .visualizations .comparison-img-container img {
             width: 100%; } }
+    .main .visualizations .section-container {
+      margin: 1rem 0; }
+      .main .visualizations .section-container .viz-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem; }
+        .main .visualizations .section-container .viz-section img {
+          width: 100%;
+          margin-bottom: 1rem; }
+  .main #data table {
+    border-collapse: collapse;
+    width: 100%; }
+  .main #data th,
+  .main #data td {
+    padding: 0.25rem;
+    text-align: left;
+    border: 1px solid #ccc; }
+  .main #data tbody tr:nth-child(odd) {
+    background: #eee; }
