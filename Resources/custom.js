@@ -10,6 +10,7 @@ const createDataTable = (cities) => {
   let dataDiv = document.querySelector('#data');
   console.log(dataDiv);
   let table = document.createElement('table');
+  table.classList.add('table');
   let tableBody = document.createElement('tbody');
   let tableHeader = document.createElement('tr');
 

@@ -32,7 +32,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  background-color: #e9e9e9; }
+  background-color: #e9e9e9;
+  margin-top: 70px; }
   @media (max-width: 768px) {
     .main {
       padding: 0.5rem; } }
@@ -79,17 +80,17 @@ h2 {
         @media (max-width: 768px) {
           .main .visualizations .comparison-img-container img {
             width: 100%; } }
+    .main .visualizations .viz-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem; }
+      .main .visualizations .viz-section img {
+        width: 100%;
+        margin-bottom: 1rem; }
     .main .visualizations .section-container {
       margin: 1rem 0; }
-      .main .visualizations .section-container .viz-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem; }
-        .main .visualizations .section-container .viz-section img {
-          width: 100%;
-          margin-bottom: 1rem; }
   .main #data {
     overflow: scroll; }
     .main #data table {
